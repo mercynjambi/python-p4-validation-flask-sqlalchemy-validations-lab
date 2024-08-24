@@ -9,6 +9,7 @@ class Author(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True, nullable=False)
     phone_number = db.Column(db.String)
+    
 
     @validates('name') 
     def validate_author(self, key, name):
